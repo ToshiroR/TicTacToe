@@ -1,1 +1,15 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  body {
+    background-color: rgb(40, 40, 40);
+  }
+  
+  .title {
+    color: azure;
+    text-align: center;
+    padding: 20px;
+  }
