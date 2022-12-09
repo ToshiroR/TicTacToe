@@ -1,3 +1,13 @@
+const tBoard = document.querySelector("#board-container");
+const tile = document.getElementById("tile");
+tBoard.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target == target) {
+    console.log(target)
+  }
+})
+
+
 const Player = (name, choice) => {
     const getName = () => name;
     const getChoice = () => choice;
