@@ -7,5 +7,9 @@ const Player = (name, choice) => {
 
 
 const gameBoard = () => {
-    
+    let board = [
+      ['','',''],
+      ['','',''],
+      ['','','']
+    ];
 };
