@@ -6,10 +6,26 @@
   
   body {
     background-color: rgb(40, 40, 40);
+    height: 100vh;
   }
   
   .title {
     color: azure;
     text-align: center;
     padding: 20px;
+  }
+
+  #board-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+
+    background-color: beige;
+    width: 500px;
+    height: 500px;
+  }
+
+  #tile {
+    border: 1px solid black;
   }
