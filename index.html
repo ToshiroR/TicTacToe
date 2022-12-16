@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
 
-  <title>Tic-Tac-Toe</title>
-</head>
-<body>
-  <h1 class="title">Tic-Tac-Toe</h1>
-  
-  <section id="board-container">
-    <div id="tile" data-cell="[0][0]">1</div>
-    <div id="tile" data-cell="[0][1]">2</div>
-    <div id="tile" data-cell="[0][2]">3</div>
-    <div id="tile" data-cell="[1][0]">4</div>
-    <div id="tile" data-cell="[1][1]">5</div>
-    <div id="tile" data-cell="[1][2]">6</div>
-    <div id="tile" data-cell="[2][0]">7</div>
-    <div id="tile" data-cell="[2][1]">8</div>
-    <div id="tile" data-cell="[2][2]">8</div>
-    
-  </section>
-</body>
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <h1 class="title">Tic-Tac-Toe</h1>
+
+    <form action="" class="form-container" id="myForm" name="myForm">
+      <div>
+        <label for="player">Player 1:</label>
+        <input type="text" id="player" name="player" placeholder="JoeMama" />
+      </div>
+
+      <div>
+        <label for="choice">Choice: </label>
+        <select name="choice" id="choice">
+          <option value="x">X</option>
+          <option value="circle">O</option>
+        </select>
+      </div>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <section id="board-container">
+      <div id="tile" data-cell="1"></div>
+      <div id="tile" data-cell="2"></div>
+      <div id="tile" data-cell="3"></div>
+      <div id="tile" data-cell="4"></div>
+      <div id="tile" data-cell="5"></div>
+      <div id="tile" data-cell="6"></div>
+      <div id="tile" data-cell="7"></div>
+      <div id="tile" data-cell="8"></div>
+      <div id="tile" data-cell="9"></div>
+    </section>
+
+    <div class="restart-container">
+      <div class="winning-text"></div>
+      <button class="restart" id="restart">Restart</button>
+    </div>
+  </body>
 </html>

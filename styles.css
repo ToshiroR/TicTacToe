@@ -1,31 +1,62 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  body {
-    background-color: rgb(40, 40, 40);
-    height: 100vh;
-  }
-  
-  .title {
-    color: azure;
-    text-align: center;
-    padding: 20px;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
 
-  #board-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin: auto;
+body {
+  background-color: rgb(40, 40, 40);
+  height: 100vh;
+  text-align: center;
+}
 
-    background-color: beige;
-    width: 500px;
-    height: 500px;
-  }
+.title {
+  color: azure;
+  text-align: center;
+  padding: 20px;
+}
 
-  #tile {
-    border: 1px solid black;
-  }
+/*    Board and tiles   */
+#board-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: auto;
+
+  background-color: beige;
+  width: 500px;
+  height: 500px;
+}
+
+#tile {
+  border: 1px solid black;
+}
+
+/*    form    */
+form {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  font-size: 1.5rem;
+  color: beige;
+  background-color: black;
+}
+
+form div {
+  padding: 15px;
+}
+
+/*    Buttons   */
+button {
+  font-size: 1.7rem;
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
