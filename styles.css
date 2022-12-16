@@ -19,11 +19,10 @@ body {
 /*    Board and tiles   */
 #board-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
 
   background-color: beige;
+  margin: 20px auto;
   width: 500px;
   height: 500px;
 }
@@ -46,9 +45,19 @@ form div {
   padding: 15px;
 }
 
+input {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+select {
+  font-size: 22px;
+}
+
 /*    Buttons   */
 button {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   background-color: white;
   border: 2px solid black;
   padding: 5px;
