@@ -1,13 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Courier New", Courier, monospace;
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --cell-size: 175px;
 }
 
 body {
-  background-color: rgb(40, 40, 40);
-  height: 100vh;
-  text-align: center;
+  margin: 0;
+  background-color: rgb(37, 37, 37);
 }
 
 .title {
@@ -18,27 +21,37 @@ body {
 
 /*    Board and tiles   */
 #board-container {
+  width: 100vw;
+  height: 50vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  background-color: beige;
-  margin: 20px auto;
-  width: 500px;
-  height: 500px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, auto);
 }
 
 #tile {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  font-size: calc(var(--cell-size) * 1.2);
   border: 1px solid black;
+  background-color: azure;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cabin Sketch", Arial, Helvetica, sans-serif;
 }
 
 /*    form    */
 form {
   margin: auto;
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
   font-size: 1.5rem;
   color: beige;
   background-color: black;
+  text-align: center;
 }
 
 form div {
@@ -46,7 +59,8 @@ form div {
 }
 
 input {
-  width: 100%;
+  padding: 5px;
+  width: 80%;
   text-align: center;
   font-size: 18px;
 }
@@ -60,7 +74,7 @@ button {
   font-size: 1.2rem;
   background-color: white;
   border: 2px solid black;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -69,3 +83,5 @@ button:hover {
   color: white;
   border-color: white;
 }
+
+/*    winning message window    */
