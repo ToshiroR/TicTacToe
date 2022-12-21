@@ -1,4 +1,5 @@
 //   extract values from form
+//   make form disappear after submit
 //   make the gameboard interactable on click
 //   when player clicks a tile, the X or O displays in the tile
 //   switch turns after player chooses a tile
