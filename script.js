@@ -1,48 +1,62 @@
 //   extract values from form
 const player = (() => {
-  const form = document.getElementById("myForm");
 
+  const form = document.getElementById("myForm");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    //   make form disappear after submit
     form.classList.remove("show");
+
+  
   });
 })();
-//   make form disappear after submit
+
 //   make the gameboard interactable on click
 //   when player clicks a tile, the X or O displays in the tile
 const gameboard = (() => {
   const tile = document.querySelectorAll("#tile");
-  let playerTurn = false;
+  
   tile.forEach((cell) => {
     cell.removeEventListener("click", makeMove);
     cell.addEventListener("click", makeMove, { once: true });
   });
+  let playerOne = choice.value;
+  let playerTwo = "";
+  let playerTurn = false;
 
   function makeMove(e) {
     const cell = e.target;
-    let player = choice.value;
-    let enemy = "";
-    if (player === "X") {
-      enemy = "O";
+
+    if (playerOne === "X") {
+      playerTwo = "O";
     }
-    if (player === "O") {
-      enemy = "X";
+    if (playerOne === "O") {
+      playerTwo = "X";
     }
 
     if (cell.textContent === "" && !playerTurn) {
-      cell.textContent = player;
+      cell.textContent = playerOne;
       playerTurn = true;
     }
     if (cell.textContent === "" && playerTurn) {
-      cell.textContent = enemy;
+      cell.textContent = playerTwo;
       playerTurn = false;
     }
   }
+  
+  
 })();
 
 const displayController = (() => {
-  
+
+
+ 
 })();
+
+
+
+
+
 //   switch turns after player chooses a tile
 //   make sure a tile cant be overwritten
 //   check to see if theres a winner everytime a tile is chosen
