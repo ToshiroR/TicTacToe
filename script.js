@@ -13,12 +13,12 @@ const displayController = (() => {
     [3, 4, 5],
     [6, 7, 8],
     [0, 3, 6],
-    [1, 4, 7],
+    [1, 4, 7], 
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6],
+    [2, 4, 6], 
   ];
-
+ 
   let playerOne = choice.value;
   let playerTwo = "";
   if (playerOne === "X") {
@@ -47,7 +47,7 @@ const displayController = (() => {
 
   function makeMove(e) {
     const cell = e.target;
-    const currentTurn = playerTurn ? playerOne : playerTwo;
+    const currentTurn = !playerTurn ? playerOne : playerTwo;
     console.log(currentTurn);
     //   when player clicks a tile, the X or O displays in the tile
     placeMarker(cell, currentTurn);
