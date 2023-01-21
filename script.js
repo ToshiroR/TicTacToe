@@ -1,8 +1,4 @@
-const player = (() => {})();
-
-const gameboard = (() => {})();
-
-const displayController = (() => {
+(() => {
   const form = document.getElementById("myForm");
   const turnPlayer = document.getElementById("turn-player");
   const tile = document.querySelectorAll("#tile");
@@ -39,6 +35,7 @@ const displayController = (() => {
     //   make form disappear after submit
     form.classList.remove("show");
   });
+
   restart.addEventListener("click", startGame);
   //   make the gameboard interactable on click
   function startGame() {
@@ -67,6 +64,7 @@ const displayController = (() => {
       turn();
     }
   }
+
   //    display whos turn it is
   function turn() {
     if (!playerTurn) {
