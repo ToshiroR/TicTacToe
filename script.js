@@ -9,6 +9,7 @@ const displayController = (() => {
   const winText = document.querySelector("[win-text]");
   const winningMessage = document.querySelector(".winning-message");
   const cellElement = document.querySelectorAll("[data-cell]");
+  const restart = document.getElementById("restart");
   const winNum = [
     [0, 1, 2],
     [3, 4, 5],
@@ -38,13 +39,20 @@ const displayController = (() => {
     //   make form disappear after submit
     form.classList.remove("show");
   });
-
+  restart.addEventListener("click", startGame);
   //   make the gameboard interactable on click
-  tile.forEach((cell) => {
-    cell.removeEventListener("click", makeMove);
-    //   make sure a tile cant be overwritten
-    cell.addEventListener("click", makeMove, { once: true });
-  });
+  function startGame() {
+    tile.forEach((cell) => {
+      cell.classList.remove(playerOne);
+      cell.classList.remove(playerTwo);
+      cell.textContent = "";
+      playerTurn = false;
+      cell.removeEventListener("click", makeMove);
+      //   make sure a tile cant be overwritten
+      cell.addEventListener("click", makeMove, { once: true });
+      winningMessage.classList.remove("show");
+    });
+  }
 
   function makeMove(e) {
     const cell = e.target;
@@ -59,7 +67,7 @@ const displayController = (() => {
       turn();
     }
   }
-//    display whos turn it is
+  //    display whos turn it is
   function turn() {
     if (!playerTurn) {
       turnPlayer.textContent = `${playerOne} Turn`;
@@ -99,7 +107,7 @@ const displayController = (() => {
     winningMessage.classList.add("show");
   }
 
-//   if there is no winner when all the tiles are clicked, display a Draw
+  //   if there is no winner when all the tiles are clicked, display a Draw
   function isDraw() {
     return [...cellElement].every((cell) => {
       return (
@@ -107,6 +115,6 @@ const displayController = (() => {
       );
     });
   }
+
+  startGame();
 })();
-
-
